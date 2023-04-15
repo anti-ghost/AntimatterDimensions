@@ -1,0 +1,283 @@
+body.t-s12 {
+    --s12-taskbar-height: 4.5rem;
+    --s12-border-color: #27221e;
+    --s12-background-gradient: repeating-linear-gradient( 50deg, rgba(170, 170, 170, 10%), rgba(170, 170, 170, 10%) 2rem, rgba(255, 255, 255, 10%) 4rem, rgba(255, 255, 255, 10%) 5rem, rgba(170, 170, 170, 10%) 6rem, rgba(170, 170, 170, 10%) 8rem ), linear-gradient( -50deg, rgba(60, 60, 60, 30%), transparent 20%, transparent 80%, rgba(60, 60, 60, 30%) );
+    height: 100%;
+    background: url("../images/s12-bg.jpg") center center / cover no-repeat fixed rgb(27, 185, 238);
+}
+
+.t-s12 .container {
+    color: black;
+}
+
+.t-s12 #ui {
+    justify-content: flex-start;
+    perspective: 200vh;
+    scrollbar-gutter: auto;
+}
+
+.t-s12 .ui-wrapper {
+    flex-direction: column;
+    height: 100%;
+}
+
+.c-s12-close-button, .t-s12 .c-modal .c-modal__close-btn {
+    display: flex;
+    width: 5rem;
+    height: 1.8rem;
+    position: absolute;
+    top: 0px;
+    right: 1rem;
+    justify-content: center;
+    align-items: center;
+    font-size: 0px;
+    background-image: url("../images/s12/xmark.png"), linear-gradient(rgba(255, 255, 255, 0.4) 40%, transparent 60%), radial-gradient(rgb(180, 55, 33), rgb(132, 71, 64));
+    background-position: center center;
+    background-repeat: no-repeat;
+    border-right-color: ;
+    border-right-style: ;
+    border-right-width: ;
+    border-bottom-color: ;
+    border-bottom-style: ;
+    border-bottom-width: ;
+    border-left-color: ;
+    border-left-style: ;
+    border-left-width: ;
+    border-image-source: ;
+    border-image-slice: ;
+    border-image-width: ;
+    border-image-outset: ;
+    border-image-repeat: ;
+    border-top: none;
+    border-radius: 0px 0px 0.5rem 0.5rem;
+    box-shadow: rgba(255, 255, 255, 0.8) 0px 0px 0.2rem 0.1rem inset;
+    cursor: pointer;
+}
+
+.c-modal__close-btn--disabled {
+    filter: grayscale(1);
+    cursor: default;
+}
+
+.c-s12-close-button::before, .t-s12 .c-modal .c-modal__close-btn:not(.c-modal__close-btn--disabled)::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    background-image: url("../images/s12/xmark.png"), linear-gradient(transparent 50%, rgba(224, 178, 64, 0.6));
+    background-position: center center;
+    background-repeat: no-repeat;
+    border-radius: inherit;
+    box-shadow: rgb(211, 85, 50) 0px 0px 1rem 0.3rem;
+    transition: opacity 0.4s ease 0s;
+}
+
+.c-s12-close-button:hover::before, .c-modal__close-btn:hover::before {
+    opacity: 1;
+}
+
+.t-s12 .c-modal {
+    --color-text: black;
+    --color-text-inverted: white;
+    max-width: calc(100% - 10rem);
+    font-family: "Segoe UI", Typewriter;
+    font-weight: normal;
+    background-color: rgba(187, 216, 242, 0.75);
+    background-image: var(--s12-background-gradient);
+    border: 0.1rem solid var(--s12-border-color);
+    padding: 2.4rem 1rem 1rem;
+    backdrop-filter: blur(1rem);
+}
+
+.t-s12 .c-modal__inner:not(.c-credits-modal), .t-s12 .c-modal-message, .t-s12 .l-h2p-modal, .t-s12 .c-information-modal, .t-s12 .l-changelog-modal, .t-s12 .c-modal-away-progress {
+    align-items: flex-start;
+    text-align: left;
+    font-size: 1.3rem;
+    color: black;
+    background-color: rgb(240, 240, 240);
+    border: 0.1rem solid var(--s12-border-color);
+    margin: 0px;
+    padding: 1rem;
+}
+
+.t-s12 .modal-progress-bar, .t-s12 .c-credits-modal {
+    color: black;
+    background-color: rgb(240, 240, 240);
+    border: 0.1rem solid var(--s12-border-color);
+    box-sizing: border-box;
+    padding: 1rem;
+}
+
+.t-s12 .c-modal-options__large {
+    width: 53rem;
+}
+
+.t-s12 .l-singularity-milestone-modal-container-inner .c-laitela-milestone {
+    text-align: center;
+    font-family: Typewriter;
+    font-size: 1.4rem;
+}
+
+.t-s12 .c-modal__title, .t-s12 .l-h2p-header, .t-s12 .l-changelog-header {
+    display: flex;
+    width: auto;
+    height: 2.2rem;
+    position: absolute;
+    top: 0.2rem;
+    left: 0px;
+    align-items: center;
+    font-size: 1.3rem;
+    font-weight: normal;
+    text-shadow: white 0px 0px 0.7rem;
+    padding-left: 1rem;
+}
+
+.c-credits-modal .c-modal__title {
+    display: inline;
+    position: static;
+}
+
+.c-credits-modal .c-game-header__antimatter {
+    color: black;
+}
+
+.t-s12 .c-h2p-title, .t-s12 .c-changelog-title {
+    font-size: 1.3rem;
+    font-weight: normal;
+}
+
+.t-s12 .c-modal__confirmation-toggle {
+    margin-top: 1.5rem;
+}
+
+.t-s12 .c-modal__confirmation-toggle__checkbox {
+    width: 1.6rem;
+    height: 1.6rem;
+    color: rgb(75, 97, 146);
+    background: linear-gradient(-45deg, rgb(255, 255, 255), rgb(174, 178, 181));
+    border: 0.2rem solid white;
+    border-radius: 0px;
+    box-shadow: 0 0 0.1rem 0.1rem var(--s12-border-color), inset 0 0 0.1rem 0.1rem #a0a0a0;
+}
+
+.t-s12 .c-modal__confirmation-toggle:hover .c-modal__confirmation-toggle__checkbox {
+    transform: none;
+}
+
+.t-s12 .c-modal .o-primary-btn:not(.c-modal__close-btn, .c-autobuyer-box__mode-select), .t-s12 .c-new-game-button {
+    position: relative;
+    z-index: 0;
+    align-self: flex-end;
+    text-align: center;
+    font-family: "Segoe UI", Typewriter;
+    font-weight: normal;
+    color: black;
+    background-image: linear-gradient(white 45%, rgb(215, 215, 215) 55%);
+    border: 0.16rem solid rgb(116, 116, 116);
+    box-shadow: white 0px 0px 0.2rem 0.1rem inset;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    transition: box-shadow 0.3s ease 0s;
+}
+
+.t-s12 .c-new-game-button {
+    padding: 1rem;
+}
+
+.t-s12 .c-modal .o-primary-btn.c-select-notation__item, .t-s12 .c-modal .o-primary-btn.c-select-theme__item {
+    background-color: white;
+    background-image: none;
+    border: none;
+    box-shadow: none;
+}
+
+.t-s12 .c-modal .o-primary-btn.c-select-notation__item::before, .t-s12 .c-modal .o-primary-btn.c-select-theme__item::before {
+    display: none;
+}
+
+.t-s12 .c-modal .o-primary-btn.c-dropdown-btn {
+    z-index: 1;
+    align-self: center;
+}
+
+.t-s12 .c-modal .l-select-notation, .t-s12 .c-modal .l-select-theme {
+    border-color: rgb(116, 116, 116);
+}
+
+.l-select-notation__inner::-webkit-scrollbar, .l-select-theme__inner::-webkit-scrollbar {
+    background-color: white;
+}
+
+.t-s12 .c-modal .l-select-notation__inner::-webkit-scrollbar-thumb, .t-s12 .c-modal .l-select-theme__inner::-webkit-scrollbar-thumb {
+    background-color: rgb(116, 116, 116);
+}
+
+.t-s12 .c-modal .o-primary-btn--disabled {
+    opacity: 0.5;
+}
+
+.t-s12 .c-modal .o-primary-btn:not(.c-modal__close-btn, .c-autobuyer-box__mode-select)::after, .t-s12 .c-new-game-button::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: -1;
+    background-color: transparent;
+    transition: background-color 0.3s ease 0s;
+}
+
+.t-s12 .c-modal .o-primary-btn:not(.c-modal__close-btn):hover, .t-s12 .c-new-game-button:hover {
+    box-shadow: rgb(82, 217, 251) 0px 0px 0.2rem 0.1rem inset;
+}
+
+.t-s12 .c-modal .o-primary-btn:not(.c-modal__close-btn):hover::after, .t-s12 .c-new-game-button:hover::after {
+    background-color: rgba(46, 210, 255, 0.3);
+}
+
+.t-s12 .c-modal .o-primary-btn.o-primary-btn.c-select-notation__item:hover, .t-s12 .c-modal .o-primary-btn.o-primary-btn.c-select-theme__item:hover {
+    color: white;
+    background-color: rgb(42, 144, 255);
+    box-shadow: none;
+}
+
+.t-s12 .l-modal-buttons {
+    align-self: flex-end;
+    font-size: 1.2rem;
+}
+
+.t-s12 .c-modal__confirmation-toggle__tooltip {
+    display: none;
+}
+
+.t-s12 .l-modal-options__save-record {
+    align-self: center;
+}
+
+.t-s12 .modal-progress-bar__bg {
+    overflow: hidden;
+    position: relative;
+    background-image: linear-gradient(to right, rgb(203, 203, 203) 90%, rgb(192, 192, 192));
+    border: 0.1rem solid var(--s12-border-color);
+    border-radius: 0.2rem;
+    box-shadow: white 0px 0px 0.2rem 0.1rem inset;
+}
+
+.t-s12 .modal-progress-bar__bg::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    inset: 0px;
+    background-image: linear-gradient(rgba(255, 255, 255, 0.7) 30%, transparent 40%);
+}
+
+.t-s12 .modal-progress-bar__fg {
+    background: linear-gradient(to right, rgb(12, 184, 38), rgb(32, 218, 62) 20%, rgb(32, 218, 62) 80%, rgb(12, 184, 38));
+}
+
+.t-s12 .c-modal .c-autobuyer-box-row {
+    text-align: center;
+    background-color: transparent;
+}
