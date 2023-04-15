@@ -1,0 +1,26 @@
+* {
+    box-shadow: rgb(158, 158, 158) 1px 1px 1px 0px;
+    font-family: "Comic Sans MS", cursive, sans-serif, Typewriter, fas, fab, "Font Awesome 6 Brands", "Font Awesome 6 Free" !important;
+    border-radius: 40% !important;
+}
+
+html {
+    background-attachment: fixed;
+    background-color: rgb(255, 0, 255);
+    background-position: center bottom;
+    color: black !important;
+    border: 0.1rem solid white !important;
+}
+
+#container {
+    cursor: url("cursor.cur"), auto !important;
+}
+
+body {
+    background: rgb(15, 255, 15) !important;
+    border: 0.1rem solid white !important;
+}
+
+.o-achievement {
+    border-radius: 0.8rem !important;
+}
